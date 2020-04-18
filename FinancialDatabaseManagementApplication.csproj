@@ -61,6 +61,7 @@
       <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -73,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess.cs" />
     <Compile Include="FinancialClassLibrary\Class1.cs" />
     <Compile Include="FinancialClassLibrary\COMPANY_INFO_Model.cs" />
     <Compile Include="FinancialClassLibrary\EXCHANGE_INFO_Model.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="FinancialClassLibrary\STOCK_INFO_Model.cs" />
     <Compile Include="FinancialClassLibrary\SubSector_Model.cs" />
     <Compile Include="FinancialClassLibrary\SuperSector_Model.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
