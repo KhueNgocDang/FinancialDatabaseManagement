@@ -10,7 +10,7 @@ using Dapper;
 
 namespace FinancialDatabaseManagementApplication
 {
-    class DataAccessCompany
+    class DataAccess
     {
         public COMPANY_INFO_Model GetCompanyName(string name)
         {
@@ -69,6 +69,24 @@ namespace FinancialDatabaseManagementApplication
                 if (connection.State == ConnectionState.Closed) connection.Open();
                 string sql = @"select [Name],[Exchange_Ticker] from [EXCHANGE_INFO] where [Exchange_Ticker] = @EXCHANGE";
                 var output = connection.Query<EXCHANGE_INFO_Model>(sql, new { @EXCHANGE = name }).SingleOrDefault();
+                return output;
+            }
+        }
+        public List<COMPANY_INFO_Model> GetCompany (string name, string icb)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnName("FinancialDatabase")))
+            {
+                if (connection.State == ConnectionState.Closed) connection.Open();
+                string sql;
+                switch (icb)
+                {
+                    case "Industry": sql = @"select [Company],[Exchange_ticker],[Company_Ticker] from [COMPANY_INFO] where [Ind_CODE] = @ICB"; break;
+                    case "SuperSector": sql = @"select [Company],[Exchange_ticker],[Company_Ticker] from [COMPANY_INFO] where [SuperSector_CODE] = @ICB"; break;
+                    case "Sector": sql = @"select [Company],[Exchange_ticker],[Company_Ticker] from [COMPANY_INFO] where [Sector_CODE] = @ICB"; break;
+                    case "SubSector": sql = @"select [Company],[Exchange_ticker],[Company_Ticker] from [COMPANY_INFO] where [SubSector_CODE] = @ICB"; break;
+                    default: throw new ArgumentOutOfRangeException();
+                }
+                var output = connection.Query<COMPANY_INFO_Model>(sql, new { @ICB = name }).ToList();
                 return output;
             }
         }
