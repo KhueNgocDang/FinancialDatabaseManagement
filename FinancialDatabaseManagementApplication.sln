@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialDatabaseManagementApplication", "FinancialDatabaseManagementApplication.csproj", "{60A77E0D-62B5-4D2E-B428-A9D94705A102}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQL FINANCIAL DATABASE QUERY", "..\SQL FINANCIAL DATABASE QUERY\SQL FINANCIAL DATABASE QUERY.sqlproj", "{CC07962D-AE94-4B76-A5FD-6690140664F6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +15,6 @@ Global
 		{60A77E0D-62B5-4D2E-B428-A9D94705A102}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60A77E0D-62B5-4D2E-B428-A9D94705A102}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60A77E0D-62B5-4D2E-B428-A9D94705A102}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC07962D-AE94-4B76-A5FD-6690140664F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC07962D-AE94-4B76-A5FD-6690140664F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC07962D-AE94-4B76-A5FD-6690140664F6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{CC07962D-AE94-4B76-A5FD-6690140664F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC07962D-AE94-4B76-A5FD-6690140664F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC07962D-AE94-4B76-A5FD-6690140664F6}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

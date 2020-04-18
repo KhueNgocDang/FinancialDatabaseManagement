@@ -1,0 +1,6 @@
+﻿
+create database FINANCIALSTATEMENT;
+GO
+
+use FINANCIALSTATEMENT;
+GO

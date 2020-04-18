@@ -8,7 +8,7 @@ namespace FinancialDatabaseManagementApplication.FinancialClassLibrary
     {
         public string Company_Ticker { get; set; }
         public string Company { get; set; }
-        public string Exchange_Ticker { get; set; }
+        public string Exchange_ticker { get; set; }
         public string Ind_CODE { get; set; }
         public string SuperSector_CODE { get; set; }
         public string Sector_CODE { get; set; }

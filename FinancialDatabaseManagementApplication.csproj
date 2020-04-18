@@ -124,19 +124,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FinancialDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FinancialDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>FinancialDatabase.mdf</DependentUpon>
-    </Content>
+    <Content Include="DatabaseInteraction\ScriptsIgnoredOnImport.sql" />
     <Content Include="MetroFramework.txt" />
-    <None Include="Resources\kisspng-material-font-search-icon-5b21819439b852.2823675615289225162364.png" />
-    <None Include="Resources\Icon-Notification3.png" />
-    <None Include="Resources\Icon-Notification2.png" />
-    <None Include="Resources\Icon-Notification.png" />
-    <None Include="Resources\Icon-Notification1.png" />
+    <Content Include="DatabaseInteraction\Tables\COMPANY_INFO.sql" />
+    <Content Include="DatabaseInteraction\Tables\EXCHANGE_INFO.sql" />
+    <Content Include="DatabaseInteraction\Tables\INDEX_INFO.sql" />
+    <Content Include="DatabaseInteraction\Tables\Industry.sql" />
+    <Content Include="DatabaseInteraction\Tables\ITEM_FACT.sql" />
+    <Content Include="DatabaseInteraction\Tables\ITEM_SETTING.sql" />
+    <Content Include="DatabaseInteraction\Tables\Sector.sql" />
+    <Content Include="DatabaseInteraction\Tables\STATEMENT_ENTRIES.sql" />
+    <Content Include="DatabaseInteraction\Tables\STOCK_INFO.sql" />
+    <Content Include="DatabaseInteraction\Tables\SubSector.sql" />
+    <Content Include="DatabaseInteraction\Tables\SuperSector.sql" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -150,6 +150,8 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DatabaseInteraction\Database\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
