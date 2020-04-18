@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialDatabaseManagementApplication", "FinancialDatabaseManagementApplication.csproj", "{60A77E0D-62B5-4D2E-B428-A9D94705A102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialClassLibrary", "..\FinancialClassLibrary\FinancialClassLibrary.csproj", "{EEE44345-685E-474A-BF7A-9CED5640551E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60A77E0D-62B5-4D2E-B428-A9D94705A102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A77E0D-62B5-4D2E-B428-A9D94705A102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A77E0D-62B5-4D2E-B428-A9D94705A102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A77E0D-62B5-4D2E-B428-A9D94705A102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE44345-685E-474A-BF7A-9CED5640551E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE44345-685E-474A-BF7A-9CED5640551E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE44345-685E-474A-BF7A-9CED5640551E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE44345-685E-474A-BF7A-9CED5640551E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00B1593A-CFBA-4CFB-BD06-7E442956541F}
+	EndGlobalSection
+EndGlobal
