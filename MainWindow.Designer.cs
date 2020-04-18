@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabControl = new MetroFramework.Controls.MetroTabControl();
             this.CompanyDetail = new MetroFramework.Controls.MetroTabPage();
             this.CompanyTabControl = new MetroFramework.Controls.MetroTabControl();
@@ -47,6 +47,10 @@
             this.IndustryLabel = new System.Windows.Forms.Label();
             this.DetailLabel = new System.Windows.Forms.Label();
             this.CompanyNameLabel = new System.Windows.Forms.Label();
+            this.FinancialTab = new MetroFramework.Controls.MetroTabPage();
+            this.FinancialTabControl = new MetroFramework.Controls.MetroTabControl();
+            this.BSTab = new MetroFramework.Controls.MetroTabPage();
+            this.BSGrid = new MetroFramework.Controls.MetroGrid();
             this.CompanySearchBox = new MetroFramework.Controls.MetroTextBox();
             this.CompanySearchLabel = new System.Windows.Forms.Label();
             this.ICBSearchTab = new MetroFramework.Controls.MetroTabPage();
@@ -55,19 +59,15 @@
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.ICBSearchLabel = new System.Windows.Forms.Label();
             this.DetatiledCompanySearchTab = new MetroFramework.Controls.MetroTabPage();
-            this.FinancialTab = new MetroFramework.Controls.MetroTabPage();
-            this.FinancialTabControl = new MetroFramework.Controls.MetroTabControl();
-            this.BSTab = new MetroFramework.Controls.MetroTabPage();
-            this.BSGrid = new MetroFramework.Controls.MetroGrid();
             this.TabControl.SuspendLayout();
             this.CompanyDetail.SuspendLayout();
             this.CompanyTabControl.SuspendLayout();
             this.CompanyDetailedTab.SuspendLayout();
-            this.ICBSearchTab.SuspendLayout();
             this.FinancialTab.SuspendLayout();
             this.FinancialTabControl.SuspendLayout();
             this.BSTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BSGrid)).BeginInit();
+            this.ICBSearchTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControl
@@ -132,7 +132,7 @@
             this.CompanyDetailedTab.HorizontalScrollbarSize = 10;
             this.CompanyDetailedTab.Location = new System.Drawing.Point(4, 38);
             this.CompanyDetailedTab.Name = "CompanyDetailedTab";
-            this.CompanyDetailedTab.Size = new System.Drawing.Size(723, 254);
+            this.CompanyDetailedTab.Size = new System.Drawing.Size(723, 257);
             this.CompanyDetailedTab.TabIndex = 0;
             this.CompanyDetailedTab.Text = "Detailed";
             this.CompanyDetailedTab.VerticalScrollbarBarColor = true;
@@ -261,12 +261,96 @@
             this.CompanyNameLabel.TabIndex = 5;
             this.CompanyNameLabel.Text = "Company Name:";
             // 
+            // FinancialTab
+            // 
+            this.FinancialTab.Controls.Add(this.FinancialTabControl);
+            this.FinancialTab.HorizontalScrollbarBarColor = true;
+            this.FinancialTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.FinancialTab.HorizontalScrollbarSize = 10;
+            this.FinancialTab.Location = new System.Drawing.Point(4, 38);
+            this.FinancialTab.Name = "FinancialTab";
+            this.FinancialTab.Size = new System.Drawing.Size(723, 257);
+            this.FinancialTab.TabIndex = 1;
+            this.FinancialTab.Text = "Financials";
+            this.FinancialTab.VerticalScrollbarBarColor = true;
+            this.FinancialTab.VerticalScrollbarHighlightOnWheel = false;
+            this.FinancialTab.VerticalScrollbarSize = 10;
+            // 
+            // FinancialTabControl
+            // 
+            this.FinancialTabControl.Controls.Add(this.BSTab);
+            this.FinancialTabControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FinancialTabControl.Location = new System.Drawing.Point(0, 0);
+            this.FinancialTabControl.Name = "FinancialTabControl";
+            this.FinancialTabControl.SelectedIndex = 0;
+            this.FinancialTabControl.Size = new System.Drawing.Size(723, 222);
+            this.FinancialTabControl.TabIndex = 2;
+            this.FinancialTabControl.UseSelectable = true;
+            // 
+            // BSTab
+            // 
+            this.BSTab.Controls.Add(this.BSGrid);
+            this.BSTab.HorizontalScrollbarBarColor = true;
+            this.BSTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.BSTab.HorizontalScrollbarSize = 10;
+            this.BSTab.Location = new System.Drawing.Point(4, 38);
+            this.BSTab.Name = "BSTab";
+            this.BSTab.Size = new System.Drawing.Size(715, 180);
+            this.BSTab.TabIndex = 0;
+            this.BSTab.Text = "Balance Sheet";
+            this.BSTab.VerticalScrollbarBarColor = true;
+            this.BSTab.VerticalScrollbarHighlightOnWheel = false;
+            this.BSTab.VerticalScrollbarSize = 10;
+            // 
+            // BSGrid
+            // 
+            this.BSGrid.AllowUserToResizeRows = false;
+            this.BSGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BSGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BSGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.BSGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BSGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.BSGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BSGrid.DefaultCellStyle = dataGridViewCellStyle8;
+            this.BSGrid.EnableHeadersVisualStyles = false;
+            this.BSGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.BSGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BSGrid.Location = new System.Drawing.Point(36, 17);
+            this.BSGrid.Name = "BSGrid";
+            this.BSGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BSGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.BSGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.BSGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.BSGrid.Size = new System.Drawing.Size(676, 160);
+            this.BSGrid.TabIndex = 2;
+            // 
             // CompanySearchBox
             // 
             // 
             // 
             // 
-            this.CompanySearchBox.CustomButton.Image = global::FinancialDatabaseManagementApplication.Properties.Resources.Icon_Notification1;
+            this.CompanySearchBox.CustomButton.Image = global::FinancialDatabaseManagementApplication.Properties.Resources.kisspng_material_font_search_icon_5b21819439b852_2823675615289225162364;
             this.CompanySearchBox.CustomButton.Location = new System.Drawing.Point(216, 1);
             this.CompanySearchBox.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CompanySearchBox.CustomButton.Name = "";
@@ -358,7 +442,7 @@
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = global::FinancialDatabaseManagementApplication.Properties.Resources.Icon_Notification1;
+            this.metroTextBox1.CustomButton.Image = global::FinancialDatabaseManagementApplication.Properties.Resources.kisspng_material_font_search_icon_5b21819439b852_2823675615289225162364;
             this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(216, 1);
             this.metroTextBox1.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.metroTextBox1.CustomButton.Name = "";
@@ -418,90 +502,6 @@
             this.DetatiledCompanySearchTab.VerticalScrollbarHighlightOnWheel = false;
             this.DetatiledCompanySearchTab.VerticalScrollbarSize = 10;
             // 
-            // FinancialTab
-            // 
-            this.FinancialTab.Controls.Add(this.FinancialTabControl);
-            this.FinancialTab.HorizontalScrollbarBarColor = true;
-            this.FinancialTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.FinancialTab.HorizontalScrollbarSize = 10;
-            this.FinancialTab.Location = new System.Drawing.Point(4, 38);
-            this.FinancialTab.Name = "FinancialTab";
-            this.FinancialTab.Size = new System.Drawing.Size(723, 257);
-            this.FinancialTab.TabIndex = 1;
-            this.FinancialTab.Text = "Financials";
-            this.FinancialTab.VerticalScrollbarBarColor = true;
-            this.FinancialTab.VerticalScrollbarHighlightOnWheel = false;
-            this.FinancialTab.VerticalScrollbarSize = 10;
-            // 
-            // FinancialTabControl
-            // 
-            this.FinancialTabControl.Controls.Add(this.BSTab);
-            this.FinancialTabControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FinancialTabControl.Location = new System.Drawing.Point(0, 0);
-            this.FinancialTabControl.Name = "FinancialTabControl";
-            this.FinancialTabControl.SelectedIndex = 0;
-            this.FinancialTabControl.Size = new System.Drawing.Size(723, 222);
-            this.FinancialTabControl.TabIndex = 2;
-            this.FinancialTabControl.UseSelectable = true;
-            // 
-            // BSTab
-            // 
-            this.BSTab.Controls.Add(this.BSGrid);
-            this.BSTab.HorizontalScrollbarBarColor = true;
-            this.BSTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.BSTab.HorizontalScrollbarSize = 10;
-            this.BSTab.Location = new System.Drawing.Point(4, 38);
-            this.BSTab.Name = "BSTab";
-            this.BSTab.Size = new System.Drawing.Size(715, 180);
-            this.BSTab.TabIndex = 0;
-            this.BSTab.Text = "Balance Sheet";
-            this.BSTab.VerticalScrollbarBarColor = true;
-            this.BSTab.VerticalScrollbarHighlightOnWheel = false;
-            this.BSTab.VerticalScrollbarSize = 10;
-            // 
-            // BSGrid
-            // 
-            this.BSGrid.AllowUserToResizeRows = false;
-            this.BSGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.BSGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.BSGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.BSGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BSGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.BSGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BSGrid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.BSGrid.EnableHeadersVisualStyles = false;
-            this.BSGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.BSGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.BSGrid.Location = new System.Drawing.Point(36, 17);
-            this.BSGrid.Name = "BSGrid";
-            this.BSGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BSGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.BSGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.BSGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BSGrid.Size = new System.Drawing.Size(676, 160);
-            this.BSGrid.TabIndex = 2;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -517,12 +517,12 @@
             this.CompanyTabControl.ResumeLayout(false);
             this.CompanyDetailedTab.ResumeLayout(false);
             this.CompanyDetailedTab.PerformLayout();
-            this.ICBSearchTab.ResumeLayout(false);
-            this.ICBSearchTab.PerformLayout();
             this.FinancialTab.ResumeLayout(false);
             this.FinancialTabControl.ResumeLayout(false);
             this.BSTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BSGrid)).EndInit();
+            this.ICBSearchTab.ResumeLayout(false);
+            this.ICBSearchTab.PerformLayout();
             this.ResumeLayout(false);
 
         }

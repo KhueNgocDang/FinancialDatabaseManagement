@@ -79,5 +79,25 @@ namespace FinancialDatabaseManagementApplication.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_Notification2 {
+            get {
+                object obj = ResourceManager.GetObject("Icon-Notification2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_material_font_search_icon_5b21819439b852_2823675615289225162364 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-material-font-search-icon-5b21819439b852.2823675615289225162364", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

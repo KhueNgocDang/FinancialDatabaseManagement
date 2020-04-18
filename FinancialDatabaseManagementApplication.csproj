@@ -129,6 +129,8 @@
       <DependentUpon>FinancialDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\kisspng-material-font-search-icon-5b21819439b852.2823675615289225162364.png" />
+    <None Include="Resources\Icon-Notification3.png" />
     <None Include="Resources\Icon-Notification2.png" />
     <None Include="Resources\Icon-Notification.png" />
     <None Include="Resources\Icon-Notification1.png" />

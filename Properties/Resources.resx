@@ -124,4 +124,10 @@
   <data name="Icon-Notification1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-Notification2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon-Notification2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon-Notification3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng-material-font-search-icon-5b21819439b852.2823675615289225162364" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-material-font-search-icon-5b21819439b852.2823675615289225162364.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
