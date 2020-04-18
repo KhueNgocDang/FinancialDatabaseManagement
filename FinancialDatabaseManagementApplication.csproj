@@ -75,7 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess.cs" />
-    <Compile Include="FinancialClassLibrary\Class1.cs" />
     <Compile Include="FinancialClassLibrary\COMPANY_INFO_Model.cs" />
     <Compile Include="FinancialClassLibrary\EXCHANGE_INFO_Model.cs" />
     <Compile Include="FinancialClassLibrary\INDEX_INFO_Model.cs" />

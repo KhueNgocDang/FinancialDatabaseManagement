@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabControl = new MetroFramework.Controls.MetroTabControl();
             this.CompanyDetail = new MetroFramework.Controls.MetroTabPage();
             this.CompanyTabControl = new MetroFramework.Controls.MetroTabControl();
             this.CompanyDetailedTab = new MetroFramework.Controls.MetroTabPage();
+            this.CompanyName = new MetroFramework.Controls.MetroLabel();
             this.ExchangeMembershipTextLabel = new MetroFramework.Controls.MetroLabel();
             this.SubSectorTextLabel = new MetroFramework.Controls.MetroLabel();
             this.SectorTextLabel = new MetroFramework.Controls.MetroLabel();
@@ -59,7 +60,6 @@
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.ICBSearchLabel = new System.Windows.Forms.Label();
             this.DetatiledCompanySearchTab = new MetroFramework.Controls.MetroTabPage();
-            this.CompanyName = new MetroFramework.Controls.MetroLabel();
             this.TabControl.SuspendLayout();
             this.CompanyDetail.SuspendLayout();
             this.CompanyTabControl.SuspendLayout();
@@ -141,10 +141,19 @@
             this.CompanyDetailedTab.VerticalScrollbarHighlightOnWheel = false;
             this.CompanyDetailedTab.VerticalScrollbarSize = 10;
             // 
+            // CompanyName
+            // 
+            this.CompanyName.AutoSize = true;
+            this.CompanyName.Location = new System.Drawing.Point(186, 15);
+            this.CompanyName.Name = "CompanyName";
+            this.CompanyName.Size = new System.Drawing.Size(81, 19);
+            this.CompanyName.TabIndex = 27;
+            this.CompanyName.Text = "metroLabel1";
+            // 
             // ExchangeMembershipTextLabel
             // 
             this.ExchangeMembershipTextLabel.AutoSize = true;
-            this.ExchangeMembershipTextLabel.Location = new System.Drawing.Point(586, 92);
+            this.ExchangeMembershipTextLabel.Location = new System.Drawing.Point(398, 130);
             this.ExchangeMembershipTextLabel.Name = "ExchangeMembershipTextLabel";
             this.ExchangeMembershipTextLabel.Size = new System.Drawing.Size(83, 19);
             this.ExchangeMembershipTextLabel.TabIndex = 26;
@@ -311,37 +320,37 @@
             this.BSGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.BSGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.BSGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BSGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BSGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.BSGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BSGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BSGrid.DefaultCellStyle = dataGridViewCellStyle5;
             this.BSGrid.EnableHeadersVisualStyles = false;
             this.BSGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.BSGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BSGrid.Location = new System.Drawing.Point(36, 17);
             this.BSGrid.Name = "BSGrid";
             this.BSGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BSGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BSGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.BSGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.BSGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.BSGrid.Size = new System.Drawing.Size(676, 160);
@@ -362,14 +371,14 @@
             this.CompanySearchBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.CompanySearchBox.CustomButton.UseSelectable = true;
             this.CompanySearchBox.DisplayIcon = true;
-            this.CompanySearchBox.ForeColor = System.Drawing.Color.Silver;
-            this.CompanySearchBox.Lines = new string[] {
-        "Enter company ticker here"};
+            this.CompanySearchBox.ForeColor = System.Drawing.Color.Black;
+            this.CompanySearchBox.Lines = new string[0];
             this.CompanySearchBox.Location = new System.Drawing.Point(208, 7);
             this.CompanySearchBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CompanySearchBox.MaxLength = 32767;
             this.CompanySearchBox.Name = "CompanySearchBox";
             this.CompanySearchBox.PasswordChar = '\0';
+            this.CompanySearchBox.PromptText = "Enter company ticker here";
             this.CompanySearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CompanySearchBox.SelectedText = "";
             this.CompanySearchBox.SelectionLength = 0;
@@ -379,12 +388,12 @@
             this.CompanySearchBox.ShowClearButton = true;
             this.CompanySearchBox.Size = new System.Drawing.Size(238, 23);
             this.CompanySearchBox.TabIndex = 3;
-            this.CompanySearchBox.Text = "Enter company ticker here";
             this.CompanySearchBox.UseCustomForeColor = true;
             this.CompanySearchBox.UseSelectable = true;
+            this.CompanySearchBox.WaterMark = "Enter company ticker here";
             this.CompanySearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.CompanySearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.CompanySearchBox.Click += new System.EventHandler(this.CompanySearchBox_Click);
+            this.CompanySearchBox.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.CompanySearchBox_ButtonClick);
             // 
             // CompanySearchLabel
             // 
@@ -504,15 +513,6 @@
             this.DetatiledCompanySearchTab.VerticalScrollbarBarColor = true;
             this.DetatiledCompanySearchTab.VerticalScrollbarHighlightOnWheel = false;
             this.DetatiledCompanySearchTab.VerticalScrollbarSize = 10;
-            // 
-            // CompanyName
-            // 
-            this.CompanyName.AutoSize = true;
-            this.CompanyName.Location = new System.Drawing.Point(186, 15);
-            this.CompanyName.Name = "CompanyName";
-            this.CompanyName.Size = new System.Drawing.Size(81, 19);
-            this.CompanyName.TabIndex = 27;
-            this.CompanyName.Text = "metroLabel1";
             // 
             // MainWindow
             // 
