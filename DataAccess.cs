@@ -16,7 +16,8 @@ namespace FinancialDatabaseManagementApplication
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnName("FinancialDatabase")))
             {
-                var outputCompany = connection.Query<COMPANY_INFO_Model>($"select ")
+                var outputCompany = connection.Query<COMPANY_INFO_Model>($"select * from [COMPANY_INFO] where [Company_Ticker] = '{name}'").ToList();
+                return outputCompany;
             }
         }
     }

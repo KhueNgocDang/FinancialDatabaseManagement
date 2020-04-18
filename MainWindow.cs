@@ -25,7 +25,7 @@ namespace FinancialDatabaseManagementApplication
         private void CompanySearchBox_Click(object sender, EventArgs e)
         {
             DataAccessCompany db = new DataAccessCompany;
-            CompanyName.Text =;
+            CompanyName.Text = db.GetCompany.;
         }
     }
 }
