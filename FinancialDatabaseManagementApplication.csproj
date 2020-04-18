@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -73,6 +73,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FinancialClassLibrary\Class1.cs" />
+    <Compile Include="FinancialClassLibrary\COMPANY_INFO_Model.cs" />
+    <Compile Include="FinancialClassLibrary\EXCHANGE_INFO_Model.cs" />
+    <Compile Include="FinancialClassLibrary\INDEX_INFO_Model.cs" />
+    <Compile Include="FinancialClassLibrary\Industry_Model.cs" />
+    <Compile Include="FinancialClassLibrary\ITEM_FACT_Model.cs" />
+    <Compile Include="FinancialClassLibrary\ITEM_SETTING_Model.cs" />
+    <Compile Include="FinancialClassLibrary\Sector_Model.cs" />
+    <Compile Include="FinancialClassLibrary\STATEMENT_ENTRIES_Model.cs" />
+    <Compile Include="FinancialClassLibrary\STOCK_INFO_Model.cs" />
+    <Compile Include="FinancialClassLibrary\SubSector_Model.cs" />
+    <Compile Include="FinancialClassLibrary\SuperSector_Model.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,5 +145,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

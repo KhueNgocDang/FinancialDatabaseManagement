@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FinancialClassLibrary
+namespace FinancialDatabaseManagementApplication.FinancialClassLibrary
 {
     public class EXCHANGE_INFO_Model
     {

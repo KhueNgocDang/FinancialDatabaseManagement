@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace FinancialDatabaseManagementApplication.FinancialClassLibrary
 {
-    public class Industry_Model
+    class Class1
     {
-        public string Ind_CODE { get; set; }
-        public string Industry { get; set; }
     }
 }
