@@ -57,9 +57,12 @@
             this.ICBSearchTab1 = new MetroFramework.Controls.MetroTabPage();
             this.ICBCompanyListView = new MetroFramework.Controls.MetroListView();
             this.ICBComboBox = new MetroFramework.Controls.MetroComboBox();
-            this.ICBCompanySearchBox = new MetroFramework.Controls.MetroTextBox();
+            this.ICBSearchBox = new MetroFramework.Controls.MetroTextBox();
             this.ICBSearchLabel = new System.Windows.Forms.Label();
             this.ICBListTab = new MetroFramework.Controls.MetroTabPage();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TabControl.SuspendLayout();
             this.CompanyDetail.SuspendLayout();
             this.CompanyTabControl.SuspendLayout();
@@ -80,7 +83,7 @@
             this.TabControl.Location = new System.Drawing.Point(20, 60);
             this.TabControl.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 1;
+            this.TabControl.SelectedIndex = 0;
             this.TabControl.Size = new System.Drawing.Size(760, 370);
             this.TabControl.TabIndex = 1;
             this.TabControl.UseSelectable = true;
@@ -109,7 +112,7 @@
             this.CompanyTabControl.Controls.Add(this.FinancialTab);
             this.CompanyTabControl.Location = new System.Drawing.Point(4, 33);
             this.CompanyTabControl.Name = "CompanyTabControl";
-            this.CompanyTabControl.SelectedIndex = 0;
+            this.CompanyTabControl.SelectedIndex = 1;
             this.CompanyTabControl.Size = new System.Drawing.Size(731, 299);
             this.CompanyTabControl.TabIndex = 16;
             this.CompanyTabControl.UseSelectable = true;
@@ -411,7 +414,7 @@
             // 
             this.ICBSearchTab1.Controls.Add(this.ICBCompanyListView);
             this.ICBSearchTab1.Controls.Add(this.ICBComboBox);
-            this.ICBSearchTab1.Controls.Add(this.ICBCompanySearchBox);
+            this.ICBSearchTab1.Controls.Add(this.ICBSearchBox);
             this.ICBSearchTab1.Controls.Add(this.ICBSearchLabel);
             this.ICBSearchTab1.HorizontalScrollbarBarColor = true;
             this.ICBSearchTab1.HorizontalScrollbarHighlightOnWheel = false;
@@ -428,15 +431,20 @@
             // 
             // ICBCompanyListView
             // 
+            this.ICBCompanyListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
             this.ICBCompanyListView.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.ICBCompanyListView.FullRowSelect = true;
             this.ICBCompanyListView.Location = new System.Drawing.Point(106, 114);
             this.ICBCompanyListView.Name = "ICBCompanyListView";
             this.ICBCompanyListView.OwnerDraw = true;
-            this.ICBCompanyListView.Size = new System.Drawing.Size(477, 158);
+            this.ICBCompanyListView.Size = new System.Drawing.Size(571, 158);
             this.ICBCompanyListView.TabIndex = 6;
             this.ICBCompanyListView.UseCompatibleStateImageBehavior = false;
             this.ICBCompanyListView.UseSelectable = true;
+            this.ICBCompanyListView.View = System.Windows.Forms.View.Details;
             // 
             // ICBComboBox
             // 
@@ -454,44 +462,44 @@
             this.ICBComboBox.UseSelectable = true;
             this.ICBComboBox.SelectedIndexChanged += new System.EventHandler(this.ICBComboBox_SelectedIndexChanged);
             // 
-            // ICBCompanySearchBox
+            // ICBSearchBox
             // 
             // 
             // 
             // 
-            this.ICBCompanySearchBox.CustomButton.Image = global::FinancialDatabaseManagementApplication.Properties.Resources.kisspng_material_font_search_icon_5b21819439b852_2823675615289225162364;
-            this.ICBCompanySearchBox.CustomButton.Location = new System.Drawing.Point(216, 1);
-            this.ICBCompanySearchBox.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ICBCompanySearchBox.CustomButton.Name = "";
-            this.ICBCompanySearchBox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.ICBCompanySearchBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.ICBCompanySearchBox.CustomButton.TabIndex = 1;
-            this.ICBCompanySearchBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.ICBCompanySearchBox.CustomButton.UseSelectable = true;
-            this.ICBCompanySearchBox.DisplayIcon = true;
-            this.ICBCompanySearchBox.ForeColor = System.Drawing.Color.Silver;
-            this.ICBCompanySearchBox.Lines = new string[0];
-            this.ICBCompanySearchBox.Location = new System.Drawing.Point(371, 43);
-            this.ICBCompanySearchBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ICBCompanySearchBox.MaxLength = 32767;
-            this.ICBCompanySearchBox.Name = "ICBCompanySearchBox";
-            this.ICBCompanySearchBox.PasswordChar = '\0';
-            this.ICBCompanySearchBox.PromptText = "Enter Company Ticker  here";
-            this.ICBCompanySearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ICBCompanySearchBox.SelectedText = "";
-            this.ICBCompanySearchBox.SelectionLength = 0;
-            this.ICBCompanySearchBox.SelectionStart = 0;
-            this.ICBCompanySearchBox.ShortcutsEnabled = true;
-            this.ICBCompanySearchBox.ShowButton = true;
-            this.ICBCompanySearchBox.ShowClearButton = true;
-            this.ICBCompanySearchBox.Size = new System.Drawing.Size(238, 23);
-            this.ICBCompanySearchBox.TabIndex = 4;
-            this.ICBCompanySearchBox.UseCustomForeColor = true;
-            this.ICBCompanySearchBox.UseSelectable = true;
-            this.ICBCompanySearchBox.WaterMark = "Enter Company Ticker  here";
-            this.ICBCompanySearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ICBCompanySearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.ICBCompanySearchBox.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.ICBCompanySearchBox_ButtonClick);
+            this.ICBSearchBox.CustomButton.Image = global::FinancialDatabaseManagementApplication.Properties.Resources.kisspng_material_font_search_icon_5b21819439b852_2823675615289225162364;
+            this.ICBSearchBox.CustomButton.Location = new System.Drawing.Point(216, 1);
+            this.ICBSearchBox.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ICBSearchBox.CustomButton.Name = "";
+            this.ICBSearchBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.ICBSearchBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.ICBSearchBox.CustomButton.TabIndex = 1;
+            this.ICBSearchBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.ICBSearchBox.CustomButton.UseSelectable = true;
+            this.ICBSearchBox.DisplayIcon = true;
+            this.ICBSearchBox.ForeColor = System.Drawing.Color.Silver;
+            this.ICBSearchBox.Lines = new string[0];
+            this.ICBSearchBox.Location = new System.Drawing.Point(371, 43);
+            this.ICBSearchBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ICBSearchBox.MaxLength = 32767;
+            this.ICBSearchBox.Name = "ICBSearchBox";
+            this.ICBSearchBox.PasswordChar = '\0';
+            this.ICBSearchBox.PromptText = "Enter ICB Code  here";
+            this.ICBSearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ICBSearchBox.SelectedText = "";
+            this.ICBSearchBox.SelectionLength = 0;
+            this.ICBSearchBox.SelectionStart = 0;
+            this.ICBSearchBox.ShortcutsEnabled = true;
+            this.ICBSearchBox.ShowButton = true;
+            this.ICBSearchBox.ShowClearButton = true;
+            this.ICBSearchBox.Size = new System.Drawing.Size(238, 23);
+            this.ICBSearchBox.TabIndex = 4;
+            this.ICBSearchBox.UseCustomForeColor = true;
+            this.ICBSearchBox.UseSelectable = true;
+            this.ICBSearchBox.WaterMark = "Enter ICB Code  here";
+            this.ICBSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ICBSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.ICBSearchBox.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.ICBSearchBox_ButtonClick);
             // 
             // ICBSearchLabel
             // 
@@ -519,6 +527,21 @@
             this.ICBListTab.VerticalScrollbarBarColor = true;
             this.ICBListTab.VerticalScrollbarHighlightOnWheel = false;
             this.ICBListTab.VerticalScrollbarSize = 10;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Company Ticker";
+            this.columnHeader1.Width = 150;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Company Name";
+            this.columnHeader2.Width = 200;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Exchange Ticker";
+            this.columnHeader3.Width = 150;
             // 
             // MainWindow
             // 
@@ -554,7 +577,7 @@
         private MetroFramework.Controls.MetroTabPage ICBListTab;
         private MetroFramework.Controls.MetroTextBox CompanySearchBox;
         private MetroFramework.Controls.MetroComboBox ICBComboBox;
-        private MetroFramework.Controls.MetroTextBox ICBCompanySearchBox;
+        private MetroFramework.Controls.MetroTextBox ICBSearchBox;
         private System.Windows.Forms.Label ICBSearchLabel;
         private MetroFramework.Controls.MetroListView ICBCompanyListView;
         private MetroFramework.Controls.MetroTabControl CompanyTabControl;
@@ -576,6 +599,9 @@
         private MetroFramework.Controls.MetroTabPage BSTab;
         private MetroFramework.Controls.MetroGrid BSGrid;
         private MetroFramework.Controls.MetroLabel CompanyName;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
 

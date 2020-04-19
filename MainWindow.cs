@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialDatabaseManagementApplication.FinancialClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,10 +40,18 @@ namespace FinancialDatabaseManagementApplication
 
         }
 
-        private void ICBCompanySearchBox_ButtonClick(object sender, EventArgs e)
+        private void ICBSearchBox_ButtonClick(object sender, EventArgs e)
         {
             DataAccess db = new DataAccess();
-
+            ICBCompanyListView.Items.Clear();
+            var companylist = db.GetCompany(ICBSearchBox.Text,ICBComboBox.Text);
+            foreach(COMPANY_INFO_Model c in companylist)
+            {
+                ListViewItem item = new ListViewItem(c.Company_Ticker);
+                item.SubItems.Add(c.Company);
+                item.SubItems.Add(c.Exchange_ticker);
+                ICBCompanyListView.Items.Add(item);
+            }
         }
     }
 }

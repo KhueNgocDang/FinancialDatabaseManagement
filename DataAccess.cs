@@ -90,5 +90,12 @@ namespace FinancialDatabaseManagementApplication
                 return output;
             }
         }
+        public List<ITEM_SETTING_Model> GetStatementItem()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnName("FinancialDatabase")))
+            {
+                if (connection.State == ConnectionState.Closed) connection.Open();
+            }
+        }
     }
 }
