@@ -90,11 +90,25 @@ namespace FinancialDatabaseManagementApplication
                 return output;
             }
         }
-        public List<ITEM_SETTING_Model> GetStatementItem()
+        public List<ITEM_SETTING_Model> GetStatementItem(string name, string statement)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnName("FinancialDatabase")))
             {
                 if (connection.State == ConnectionState.Closed) connection.Open();
+                string sql = @"select [ITEM_SETTING].[Item_Title],
+                                [ITEM_SETTING].[Item_ID],
+                                [ITEM_FACT].[YEAR] as Year, 
+                                [ITEM_FACT].[Value] 
+                                from [ITEM_SETTING] join [ITEM_FACT] 
+                                on [ITEM_SETTING].[Item_ID]=[ITEM_FACT].[Item_ID]
+                                where [ITEM_SETTING].[ENTRY_ID] = @STATEMENT 
+                                and [ITEM_FACT].[TICKER]= @CTICKER";
+                var output = connection.Query<ITEM_SETTING_Model, ITEM_FACT_Model, ITEM_SETTING_Model>(sql, (setting, fact) =>
+                  {
+                      setting.itemfact = fact;
+                      return setting;
+                  }, new { @STATEMENT = statement, @CTICKER = name }, splitOn: "Year").ToList();
+                return output;
             }
         }
     }

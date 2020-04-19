@@ -12,5 +12,6 @@ namespace FinancialDatabaseManagementApplication.FinancialClassLibrary
         public string Item_Description { get; set; }
         public string Item_Properties { get; set; }
         public string Item_Title { get; set; }
+        public ITEM_FACT_Model itemfact { get; set; }
     }
 }

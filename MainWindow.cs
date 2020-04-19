@@ -27,12 +27,28 @@ namespace FinancialDatabaseManagementApplication
         private void CompanySearchBox_ButtonClick(object sender, EventArgs e)
         {
             DataAccess db = new DataAccess();
-            CompanyName.Text = db.GetCompanyName(CompanySearchBox.Text).Company;
-            IndustryTextLabel.Text = db.GetIndustryName(db.GetCompanyName(CompanySearchBox.Text).Ind_CODE).Industry + " " + db.GetCompanyName(CompanySearchBox.Text).Ind_CODE;
-            SuperSectorTextLabel.Text = db.GetSuperSectorName(db.GetCompanyName(CompanySearchBox.Text).SuperSector_CODE).SuperSector + " " + db.GetCompanyName(CompanySearchBox.Text).SuperSector_CODE;
-            SectorTextLabel.Text = db.GetSectorName(db.GetCompanyName(CompanySearchBox.Text).Sector_CODE).Sector + " " + db.GetCompanyName(CompanySearchBox.Text).Sector_CODE;
-            SubSectorTextLabel.Text = db.GetSubSectorName(db.GetCompanyName(CompanySearchBox.Text).SubSector_CODE).SubSector + " " + db.GetCompanyName(CompanySearchBox.Text).SubSector_CODE;
-            ExchangeMembershipTextLabel.Text = db.GetExchangeName(db.GetCompanyName(CompanySearchBox.Text).Exchange_ticker).Name + " " + db.GetCompanyName(CompanySearchBox.Text).Exchange_ticker;
+            //For DetailedTab
+            { 
+                CompanyName.Text = db.GetCompanyName(CompanySearchBox.Text).Company;
+                IndustryTextLabel.Text = db.GetIndustryName(db.GetCompanyName(CompanySearchBox.Text).Ind_CODE).Industry + " " + db.GetCompanyName(CompanySearchBox.Text).Ind_CODE;
+                SuperSectorTextLabel.Text = db.GetSuperSectorName(db.GetCompanyName(CompanySearchBox.Text).SuperSector_CODE).SuperSector + " " + db.GetCompanyName(CompanySearchBox.Text).SuperSector_CODE;
+                SectorTextLabel.Text = db.GetSectorName(db.GetCompanyName(CompanySearchBox.Text).Sector_CODE).Sector + " " + db.GetCompanyName(CompanySearchBox.Text).Sector_CODE;
+                SubSectorTextLabel.Text = db.GetSubSectorName(db.GetCompanyName(CompanySearchBox.Text).SubSector_CODE).SubSector + " " + db.GetCompanyName(CompanySearchBox.Text).SubSector_CODE;
+                ExchangeMembershipTextLabel.Text = db.GetExchangeName(db.GetCompanyName(CompanySearchBox.Text).Exchange_ticker).Name + " " + db.GetCompanyName(CompanySearchBox.Text).Exchange_ticker;
+            }
+            //For FinancialTab
+            {
+                BSListView.Items.Clear();
+                var BSItemsList = db.GetStatementItem(CompanySearchBox.Text, "B01-DN");
+                foreach(ITEM_SETTING_Model i in BSItemsList)
+                {
+                    ListViewItem item = new ListViewItem(i.Item_ID);
+                    item.SubItems.Add(i.Item_Title);
+                    item.SubItems.Add(i.itemfact.YEAR);
+                    item.SubItems.Add(i.itemfact.Value);
+                    BSListView.Items.Add(item);
+                }
+            }
         }
 
         private void MainWindow_Load(object sender, EventArgs e)
