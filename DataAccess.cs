@@ -111,5 +111,15 @@ namespace FinancialDatabaseManagementApplication
                 return output;
             }
         }
+        public List<STOCK_INFO_Model> GetStockInfo(string name, DateTime FromDate, DateTime ToDate) 
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnName("FinancialDatabase"))) 
+            {
+                if (connection.State == ConnectionState.Closed) connection.Open();
+                string sql = @"select [Day],[Closed Adjusted Price] from [STOCK_INFO] where [Company_Ticker] = @CTICKER and Day Between @FDate and @TDate";
+                var output = connection.Query<STOCK_INFO_Model>(sql, new {@CTICKER = name, @FDate = FromDate, @TDate = ToDate}).ToList();
+                return output;
+            }
+        }
     }
 }

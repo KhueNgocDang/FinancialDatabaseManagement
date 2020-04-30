@@ -63,7 +63,7 @@ namespace FinancialDatabaseManagementApplication
                 //For Cash Flow Statement
                 CFSListView.Items.Clear();
                 var CFSItemList = db.GetStatementItem(CompanySearchBox.Text, "B03-DN");
-                foreach (ITEM_SETTING_Model i in FINCSItemList)
+                foreach (ITEM_SETTING_Model i in CFSItemList)
                 {
                     ListViewItem item = new ListViewItem(i.Item_ID);
                     item.SubItems.Add(i.Item_Title);
@@ -71,6 +71,19 @@ namespace FinancialDatabaseManagementApplication
                     item.SubItems.Add(i.itemfact.Value);
                     CFSListView.Items.Add(item);
                 }
+                //For Stock Info
+                StockListView.Items.Clear();
+                DateTime FromDate = DateTime.ParseExact(FromDateTextBox.Text, "dd-mm-yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                DateTime ToDate = DateTime.ParseExact(ToDateTextBox.Text, "dd-mm-yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                var StockList = db.GetStockInfo(CompanySearchBox.Text, FromDate, ToDate);
+                foreach (STOCK_INFO_Model i in StockList)
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.SubItems.Add(i.Company_Ticker);
+                    item.SubItems.Add(i.Day.ToString("dd-mm-yyyy"));
+                    StockListView.Items.Add(item);
+                }
+
             }
         }
 

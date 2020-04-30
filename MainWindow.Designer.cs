@@ -63,7 +63,7 @@
             this.ICBComboBox = new MetroFramework.Controls.MetroComboBox();
             this.ICBSearchBox = new MetroFramework.Controls.MetroTextBox();
             this.ICBSearchLabel = new System.Windows.Forms.Label();
-            this.ICBListTab = new MetroFramework.Controls.MetroTabPage();
+            this.InputTaskTab = new MetroFramework.Controls.MetroTabPage();
             this.FINCTab = new MetroFramework.Controls.MetroTabPage();
             this.CFSTab = new MetroFramework.Controls.MetroTabPage();
             this.StockTab = new MetroFramework.Controls.MetroTabPage();
@@ -80,8 +80,10 @@
             this.StockListView = new MetroFramework.Controls.MetroListView();
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FromDateLabel = new System.Windows.Forms.Label();
+            this.ToDateLabel = new System.Windows.Forms.Label();
+            this.FromDateTextBox = new System.Windows.Forms.TextBox();
+            this.ToDateTextBox = new System.Windows.Forms.TextBox();
             this.TabControl.SuspendLayout();
             this.CompanyDetail.SuspendLayout();
             this.CompanyTabControl.SuspendLayout();
@@ -99,7 +101,7 @@
             // 
             this.TabControl.Controls.Add(this.CompanyDetail);
             this.TabControl.Controls.Add(this.ICBSearchTab1);
-            this.TabControl.Controls.Add(this.ICBListTab);
+            this.TabControl.Controls.Add(this.InputTaskTab);
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl.Location = new System.Drawing.Point(30, 92);
             this.TabControl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -522,10 +524,10 @@
             // 
             // 
             this.ICBSearchBox.CustomButton.Image = global::FinancialDatabaseManagementApplication.Properties.Resources.kisspng_material_font_search_icon_5b21819439b852_2823675615289225162364;
-            this.ICBSearchBox.CustomButton.Location = new System.Drawing.Point(484, 2);
+            this.ICBSearchBox.CustomButton.Location = new System.Drawing.Point(323, 1);
             this.ICBSearchBox.CustomButton.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.ICBSearchBox.CustomButton.Name = "";
-            this.ICBSearchBox.CustomButton.Size = new System.Drawing.Size(50, 51);
+            this.ICBSearchBox.CustomButton.Size = new System.Drawing.Size(33, 33);
             this.ICBSearchBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.ICBSearchBox.CustomButton.TabIndex = 1;
             this.ICBSearchBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -566,20 +568,20 @@
             this.ICBSearchLabel.TabIndex = 3;
             this.ICBSearchLabel.Text = "ICB Search";
             // 
-            // ICBListTab
+            // InputTaskTab
             // 
-            this.ICBListTab.HorizontalScrollbarBarColor = true;
-            this.ICBListTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.ICBListTab.HorizontalScrollbarSize = 15;
-            this.ICBListTab.Location = new System.Drawing.Point(4, 38);
-            this.ICBListTab.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.ICBListTab.Name = "ICBListTab";
-            this.ICBListTab.Size = new System.Drawing.Size(1132, 527);
-            this.ICBListTab.TabIndex = 2;
-            this.ICBListTab.Text = "ICB Listing Tab";
-            this.ICBListTab.VerticalScrollbarBarColor = true;
-            this.ICBListTab.VerticalScrollbarHighlightOnWheel = false;
-            this.ICBListTab.VerticalScrollbarSize = 15;
+            this.InputTaskTab.HorizontalScrollbarBarColor = true;
+            this.InputTaskTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.InputTaskTab.HorizontalScrollbarSize = 15;
+            this.InputTaskTab.Location = new System.Drawing.Point(4, 38);
+            this.InputTaskTab.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.InputTaskTab.Name = "InputTaskTab";
+            this.InputTaskTab.Size = new System.Drawing.Size(1132, 527);
+            this.InputTaskTab.TabIndex = 2;
+            this.InputTaskTab.Text = "Input";
+            this.InputTaskTab.VerticalScrollbarBarColor = true;
+            this.InputTaskTab.VerticalScrollbarHighlightOnWheel = false;
+            this.InputTaskTab.VerticalScrollbarSize = 15;
             // 
             // FINCTab
             // 
@@ -613,6 +615,10 @@
             // 
             // StockTab
             // 
+            this.StockTab.Controls.Add(this.ToDateTextBox);
+            this.StockTab.Controls.Add(this.FromDateTextBox);
+            this.StockTab.Controls.Add(this.ToDateLabel);
+            this.StockTab.Controls.Add(this.FromDateLabel);
             this.StockTab.Controls.Add(this.StockListView);
             this.StockTab.HorizontalScrollbarBarColor = true;
             this.StockTab.HorizontalScrollbarHighlightOnWheel = false;
@@ -708,16 +714,14 @@
             // 
             this.StockListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader16,
-            this.columnHeader17,
-            this.columnHeader18,
-            this.columnHeader19});
+            this.columnHeader17});
             this.StockListView.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.StockListView.FullRowSelect = true;
-            this.StockListView.Location = new System.Drawing.Point(39, 17);
+            this.StockListView.Location = new System.Drawing.Point(22, 14);
             this.StockListView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.StockListView.Name = "StockListView";
             this.StockListView.OwnerDraw = true;
-            this.StockListView.Size = new System.Drawing.Size(1003, 315);
+            this.StockListView.Size = new System.Drawing.Size(541, 315);
             this.StockListView.TabIndex = 3;
             this.StockListView.UseCompatibleStateImageBehavior = false;
             this.StockListView.UseSelectable = true;
@@ -725,23 +729,47 @@
             // 
             // columnHeader16
             // 
-            this.columnHeader16.Text = "Item ID";
+            this.columnHeader16.Text = "Day";
             this.columnHeader16.Width = 100;
             // 
             // columnHeader17
             // 
-            this.columnHeader17.Text = "Title";
+            this.columnHeader17.Text = "Closing Price";
             this.columnHeader17.Width = 200;
             // 
-            // columnHeader18
+            // FromDateLabel
             // 
-            this.columnHeader18.Text = "Year";
-            this.columnHeader18.Width = 75;
+            this.FromDateLabel.AutoSize = true;
+            this.FromDateLabel.BackColor = System.Drawing.Color.White;
+            this.FromDateLabel.Location = new System.Drawing.Point(690, 49);
+            this.FromDateLabel.Name = "FromDateLabel";
+            this.FromDateLabel.Size = new System.Drawing.Size(46, 20);
+            this.FromDateLabel.TabIndex = 4;
+            this.FromDateLabel.Text = "From";
             // 
-            // columnHeader19
+            // ToDateLabel
             // 
-            this.columnHeader19.Text = "Value";
-            this.columnHeader19.Width = 250;
+            this.ToDateLabel.AutoSize = true;
+            this.ToDateLabel.BackColor = System.Drawing.Color.White;
+            this.ToDateLabel.Location = new System.Drawing.Point(690, 146);
+            this.ToDateLabel.Name = "ToDateLabel";
+            this.ToDateLabel.Size = new System.Drawing.Size(27, 20);
+            this.ToDateLabel.TabIndex = 5;
+            this.ToDateLabel.Text = "To";
+            // 
+            // FromDateTextBox
+            // 
+            this.FromDateTextBox.Location = new System.Drawing.Point(753, 49);
+            this.FromDateTextBox.Name = "FromDateTextBox";
+            this.FromDateTextBox.Size = new System.Drawing.Size(100, 26);
+            this.FromDateTextBox.TabIndex = 6;
+            // 
+            // ToDateTextBox
+            // 
+            this.ToDateTextBox.Location = new System.Drawing.Point(753, 146);
+            this.ToDateTextBox.Name = "ToDateTextBox";
+            this.ToDateTextBox.Size = new System.Drawing.Size(100, 26);
+            this.ToDateTextBox.TabIndex = 7;
             // 
             // MainWindow
             // 
@@ -768,6 +796,7 @@
             this.FINCTab.ResumeLayout(false);
             this.CFSTab.ResumeLayout(false);
             this.StockTab.ResumeLayout(false);
+            this.StockTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -777,7 +806,7 @@
         private MetroFramework.Controls.MetroTabPage CompanyDetail;
         private System.Windows.Forms.Label CompanySearchLabel;
         private MetroFramework.Controls.MetroTabPage ICBSearchTab1;
-        private MetroFramework.Controls.MetroTabPage ICBListTab;
+        private MetroFramework.Controls.MetroTabPage InputTaskTab;
         private MetroFramework.Controls.MetroTextBox CompanySearchBox;
         private MetroFramework.Controls.MetroComboBox ICBComboBox;
         private MetroFramework.Controls.MetroTextBox ICBSearchBox;
@@ -825,8 +854,10 @@
         private MetroFramework.Controls.MetroListView StockListView;
         private System.Windows.Forms.ColumnHeader columnHeader16;
         private System.Windows.Forms.ColumnHeader columnHeader17;
-        private System.Windows.Forms.ColumnHeader columnHeader18;
-        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.TextBox ToDateTextBox;
+        private System.Windows.Forms.TextBox FromDateTextBox;
+        private System.Windows.Forms.Label ToDateLabel;
+        private System.Windows.Forms.Label FromDateLabel;
     }
 }
 
