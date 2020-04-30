@@ -38,6 +38,7 @@ namespace FinancialDatabaseManagementApplication
             }
             //For FinancialTab
             {
+                //For Balance Sheet
                 BSListView.Items.Clear();
                 var BSItemsList = db.GetStatementItem(CompanySearchBox.Text, "B01-DN");
                 foreach(ITEM_SETTING_Model i in BSItemsList)
@@ -47,6 +48,28 @@ namespace FinancialDatabaseManagementApplication
                     item.SubItems.Add(i.itemfact.YEAR);
                     item.SubItems.Add(i.itemfact.Value);
                     BSListView.Items.Add(item);
+                }
+                //For Financial Income Statement
+                FINCSListView.Items.Clear();
+                var FINCSItemList = db.GetStatementItem(CompanySearchBox.Text, "B02-DN");
+                foreach(ITEM_SETTING_Model i in FINCSItemList) 
+                {
+                    ListViewItem item = new ListViewItem(i.Item_ID);
+                    item.SubItems.Add(i.Item_Title);
+                    item.SubItems.Add(i.itemfact.YEAR);
+                    item.SubItems.Add(i.itemfact.Value);
+                    FINCSListView.Items.Add(item);
+                }
+                //For Cash Flow Statement
+                CFSListView.Items.Clear();
+                var CFSItemList = db.GetStatementItem(CompanySearchBox.Text, "B03-DN");
+                foreach (ITEM_SETTING_Model i in FINCSItemList)
+                {
+                    ListViewItem item = new ListViewItem(i.Item_ID);
+                    item.SubItems.Add(i.Item_Title);
+                    item.SubItems.Add(i.itemfact.YEAR);
+                    item.SubItems.Add(i.itemfact.Value);
+                    CFSListView.Items.Add(item);
                 }
             }
         }
