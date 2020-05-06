@@ -123,6 +123,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DatabaseInteraction\DATABASE_Interaction\SQL_Bulk_insert.sql" />
     <Content Include="DatabaseInteraction\ScriptsIgnoredOnImport.sql" />
     <Content Include="MetroFramework.txt" />
     <Content Include="DatabaseInteraction\Tables\COMPANY_INFO.sql" />
@@ -149,8 +150,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DatabaseInteraction\Database\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

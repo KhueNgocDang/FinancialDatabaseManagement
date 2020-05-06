@@ -1,6 +1,9 @@
-﻿create table Sector(
-	[Sector_CODE][varchar](4) Primary key,
-	[Sector][varchar](50),
-	[Ind_CODE][varchar](4) Foreign key references Industry(Ind_CODE),
-	[SuperSector_CODE][varchar](4) Foreign key references SuperSector(SuperSector_CODE),
+﻿CREATE TABLE [dbo].[Sector] (
+    [Sector_CODE]      VARCHAR (4)  NOT NULL,
+    [Sector]           VARCHAR (50) NULL,
+    [Ind_CODE]         VARCHAR (4)  NULL,
+    [SuperSector_CODE] VARCHAR (4)  NULL,
+    PRIMARY KEY CLUSTERED ([Sector_CODE] ASC),
+    FOREIGN KEY ([Ind_CODE]) REFERENCES [dbo].[Industry] ([Ind_CODE]),
+    FOREIGN KEY ([SuperSector_CODE]) REFERENCES [dbo].[SuperSector] ([SuperSector_CODE])
 );

@@ -1,7 +1,9 @@
-﻿create table ITEM_FACT(
-	[Item_ID][varchar](4) Foreign key references ITEM_SETTING([Item_ID]),
-	[TICKER][varchar](10) Foreign key references COMPANY_INFO(Company_Ticker),
-	[YEAR][int],
-	[Value][bigint],
-	Primary key([YEAR],[Item_ID],[TICKER]),
+﻿CREATE TABLE [dbo].[ITEM_FACT] (
+    [Item_ID] VARCHAR (4)  NOT NULL,
+    [TICKER]  VARCHAR (10) NOT NULL,
+    [YEAR]    INT          NOT NULL,
+    [Value]   BIGINT       NULL,
+    PRIMARY KEY CLUSTERED ([YEAR] ASC, [Item_ID] ASC, [TICKER] ASC),
+    FOREIGN KEY ([Item_ID]) REFERENCES [dbo].[ITEM_SETTING] ([Item_ID]),
+    FOREIGN KEY ([TICKER]) REFERENCES [dbo].[COMPANY_INFO] ([Company_Ticker])
 );

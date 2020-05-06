@@ -1,4 +1,5 @@
-﻿create table STATEMENT_ENTRIES(
-	[ENTRY_ID] varchar(13) Primary key,
-	[Statement_Title][varchar](25),
+﻿CREATE TABLE [dbo].[STATEMENT_ENTRIES] (
+    [ENTRY_ID]        VARCHAR (13) NOT NULL,
+    [Statement_Title] VARCHAR (25) NULL,
+    PRIMARY KEY CLUSTERED ([ENTRY_ID] ASC)
 );
