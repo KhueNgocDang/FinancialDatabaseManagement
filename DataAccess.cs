@@ -95,8 +95,8 @@ namespace FinancialDatabaseManagementApplication
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnName("FinancialDatabase")))
             {
                 if (connection.State == ConnectionState.Closed) connection.Open();
-                string sql = @"select [ITEM_SETTING].[Item_Title],
-                                [ITEM_SETTING].[Item_ID],
+                string sql = @"select [ITEM_SETTING].[Item_ID],
+                                [ITEM_SETTING].[Item_Title],
                                 [ITEM_FACT].[YEAR] as Year, 
                                 [ITEM_FACT].[Value] 
                                 from [ITEM_SETTING] join [ITEM_FACT] 
@@ -111,12 +111,12 @@ namespace FinancialDatabaseManagementApplication
                 return output;
             }
         }
-        public List<STOCK_INFO_Model> GetStockInfo(string name, DateTime FromDate, DateTime ToDate) 
+        public List<STOCK_INFO_Model> GetStockInfo(string name, String FromDate, String ToDate) 
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnName("FinancialDatabase"))) 
             {
                 if (connection.State == ConnectionState.Closed) connection.Open();
-                string sql = @"select [Day],[Closed Adjusted Price] from [STOCK_INFO] where [Company_Ticker] = @CTICKER and Day Between @FDate and @TDate";
+                string sql = @"select [Day],[Closed_Adjusted_Price] from [STOCK_INFO] where [Company_Ticker] = @CTICKER and [Day] Between @FDate and @TDate";
                 var output = connection.Query<STOCK_INFO_Model>(sql, new {@CTICKER = name, @FDate = FromDate, @TDate = ToDate}).ToList();
                 return output;
             }

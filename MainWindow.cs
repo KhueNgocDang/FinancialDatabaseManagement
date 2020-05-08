@@ -73,14 +73,13 @@ namespace FinancialDatabaseManagementApplication
                 }
                 //For Stock Info
                 StockListView.Items.Clear();
-                DateTime FromDate = DateTime.ParseExact(FromDateTextBox.Text, "dd-mm-yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                DateTime ToDate = DateTime.ParseExact(ToDateTextBox.Text, "dd-mm-yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                var StockList = db.GetStockInfo(CompanySearchBox.Text, FromDate, ToDate);
+                String FDate = FromDateTime.Text;
+                String TDate = ToDateTime.Text;
+                var StockList = db.GetStockInfo(CompanySearchBox.Text, FDate, TDate);
                 foreach (STOCK_INFO_Model i in StockList)
                 {
-                    ListViewItem item = new ListViewItem();
-                    item.SubItems.Add(i.Company_Ticker);
-                    item.SubItems.Add(i.Day.ToString("dd-mm-yyyy"));
+                    ListViewItem item = new ListViewItem(i.Day.ToString("yyyy-MM-dd"));
+                    item.SubItems.Add(i.Closed_Adjusted_Price.ToString());
                     StockListView.Items.Add(item);
                 }
 

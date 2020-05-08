@@ -8,6 +8,6 @@ namespace FinancialDatabaseManagementApplication.FinancialClassLibrary
     {
         public string Company_Ticker { get; set; }
         public DateTime Day { get; set; }
-        public decimal MyProperty { get; set; }
+        public decimal Closed_Adjusted_Price { get; set; }
     }
 }

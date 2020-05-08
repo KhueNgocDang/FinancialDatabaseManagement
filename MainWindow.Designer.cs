@@ -53,6 +53,24 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FINCTab = new MetroFramework.Controls.MetroTabPage();
+            this.FINCSListView = new MetroFramework.Controls.MetroListView();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CFSTab = new MetroFramework.Controls.MetroTabPage();
+            this.CFSListView = new MetroFramework.Controls.MetroListView();
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.StockTab = new MetroFramework.Controls.MetroTabPage();
+            this.ToDateTime = new System.Windows.Forms.DateTimePicker();
+            this.FromDateTime = new System.Windows.Forms.DateTimePicker();
+            this.ToDateLabel = new System.Windows.Forms.Label();
+            this.FromDateLabel = new System.Windows.Forms.Label();
+            this.StockListView = new MetroFramework.Controls.MetroListView();
             this.CompanySearchBox = new MetroFramework.Controls.MetroTextBox();
             this.CompanySearchLabel = new System.Windows.Forms.Label();
             this.ICBSearchTab1 = new MetroFramework.Controls.MetroTabPage();
@@ -64,26 +82,8 @@
             this.ICBSearchBox = new MetroFramework.Controls.MetroTextBox();
             this.ICBSearchLabel = new System.Windows.Forms.Label();
             this.InputTaskTab = new MetroFramework.Controls.MetroTabPage();
-            this.FINCTab = new MetroFramework.Controls.MetroTabPage();
-            this.CFSTab = new MetroFramework.Controls.MetroTabPage();
-            this.StockTab = new MetroFramework.Controls.MetroTabPage();
-            this.FINCSListView = new MetroFramework.Controls.MetroListView();
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CFSListView = new MetroFramework.Controls.MetroListView();
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.StockListView = new MetroFramework.Controls.MetroListView();
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FromDateLabel = new System.Windows.Forms.Label();
-            this.ToDateLabel = new System.Windows.Forms.Label();
-            this.FromDateTextBox = new System.Windows.Forms.TextBox();
-            this.ToDateTextBox = new System.Windows.Forms.TextBox();
             this.TabControl.SuspendLayout();
             this.CompanyDetail.SuspendLayout();
             this.CompanyTabControl.SuspendLayout();
@@ -91,10 +91,10 @@
             this.FinancialTab.SuspendLayout();
             this.FinancialTabControl.SuspendLayout();
             this.BSTab.SuspendLayout();
-            this.ICBSearchTab1.SuspendLayout();
             this.FINCTab.SuspendLayout();
             this.CFSTab.SuspendLayout();
             this.StockTab.SuspendLayout();
+            this.ICBSearchTab1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControl
@@ -399,6 +399,194 @@
             this.columnHeader7.Text = "Value";
             this.columnHeader7.Width = 250;
             // 
+            // FINCTab
+            // 
+            this.FINCTab.Controls.Add(this.FINCSListView);
+            this.FINCTab.HorizontalScrollbarBarColor = true;
+            this.FINCTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.FINCTab.HorizontalScrollbarSize = 10;
+            this.FINCTab.Location = new System.Drawing.Point(4, 38);
+            this.FINCTab.Name = "FINCTab";
+            this.FINCTab.Size = new System.Drawing.Size(1080, 349);
+            this.FINCTab.TabIndex = 1;
+            this.FINCTab.Text = "Financial Income Statement";
+            this.FINCTab.VerticalScrollbarBarColor = true;
+            this.FINCTab.VerticalScrollbarHighlightOnWheel = false;
+            this.FINCTab.VerticalScrollbarSize = 10;
+            // 
+            // FINCSListView
+            // 
+            this.FINCSListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11});
+            this.FINCSListView.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.FINCSListView.FullRowSelect = true;
+            this.FINCSListView.Location = new System.Drawing.Point(24, 5);
+            this.FINCSListView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FINCSListView.Name = "FINCSListView";
+            this.FINCSListView.OwnerDraw = true;
+            this.FINCSListView.Size = new System.Drawing.Size(1000, 315);
+            this.FINCSListView.TabIndex = 3;
+            this.FINCSListView.UseCompatibleStateImageBehavior = false;
+            this.FINCSListView.UseSelectable = true;
+            this.FINCSListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Item ID";
+            this.columnHeader8.Width = 100;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Title";
+            this.columnHeader9.Width = 200;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Year";
+            this.columnHeader10.Width = 75;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Value";
+            this.columnHeader11.Width = 250;
+            // 
+            // CFSTab
+            // 
+            this.CFSTab.Controls.Add(this.CFSListView);
+            this.CFSTab.HorizontalScrollbarBarColor = true;
+            this.CFSTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.CFSTab.HorizontalScrollbarSize = 10;
+            this.CFSTab.Location = new System.Drawing.Point(4, 38);
+            this.CFSTab.Name = "CFSTab";
+            this.CFSTab.Size = new System.Drawing.Size(1080, 349);
+            this.CFSTab.TabIndex = 2;
+            this.CFSTab.Text = "Cash Flow Statement";
+            this.CFSTab.VerticalScrollbarBarColor = true;
+            this.CFSTab.VerticalScrollbarHighlightOnWheel = false;
+            this.CFSTab.VerticalScrollbarSize = 10;
+            // 
+            // CFSListView
+            // 
+            this.CFSListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15});
+            this.CFSListView.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CFSListView.FullRowSelect = true;
+            this.CFSListView.Location = new System.Drawing.Point(27, 5);
+            this.CFSListView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CFSListView.Name = "CFSListView";
+            this.CFSListView.OwnerDraw = true;
+            this.CFSListView.Size = new System.Drawing.Size(1003, 315);
+            this.CFSListView.TabIndex = 3;
+            this.CFSListView.UseCompatibleStateImageBehavior = false;
+            this.CFSListView.UseSelectable = true;
+            this.CFSListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Item ID";
+            this.columnHeader12.Width = 100;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Title";
+            this.columnHeader13.Width = 200;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Year";
+            this.columnHeader14.Width = 75;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Value";
+            this.columnHeader15.Width = 250;
+            // 
+            // StockTab
+            // 
+            this.StockTab.Controls.Add(this.ToDateTime);
+            this.StockTab.Controls.Add(this.FromDateTime);
+            this.StockTab.Controls.Add(this.ToDateLabel);
+            this.StockTab.Controls.Add(this.FromDateLabel);
+            this.StockTab.Controls.Add(this.StockListView);
+            this.StockTab.HorizontalScrollbarBarColor = true;
+            this.StockTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.StockTab.HorizontalScrollbarSize = 10;
+            this.StockTab.Location = new System.Drawing.Point(4, 38);
+            this.StockTab.Name = "StockTab";
+            this.StockTab.Size = new System.Drawing.Size(1080, 349);
+            this.StockTab.TabIndex = 3;
+            this.StockTab.Text = "Stock";
+            this.StockTab.VerticalScrollbarBarColor = true;
+            this.StockTab.VerticalScrollbarHighlightOnWheel = false;
+            this.StockTab.VerticalScrollbarSize = 10;
+            // 
+            // ToDateTime
+            // 
+            this.ToDateTime.CustomFormat = "yyyy-MM-dd";
+            this.ToDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ToDateTime.Location = new System.Drawing.Point(742, 146);
+            this.ToDateTime.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
+            this.ToDateTime.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
+            this.ToDateTime.Name = "ToDateTime";
+            this.ToDateTime.Size = new System.Drawing.Size(164, 26);
+            this.ToDateTime.TabIndex = 9;
+            this.ToDateTime.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            // 
+            // FromDateTime
+            // 
+            this.FromDateTime.CustomFormat = "yyyy-MM-dd";
+            this.FromDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FromDateTime.Location = new System.Drawing.Point(742, 44);
+            this.FromDateTime.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
+            this.FromDateTime.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
+            this.FromDateTime.Name = "FromDateTime";
+            this.FromDateTime.Size = new System.Drawing.Size(164, 26);
+            this.FromDateTime.TabIndex = 8;
+            this.FromDateTime.Value = new System.DateTime(2010, 12, 25, 0, 0, 0, 0);
+            // 
+            // ToDateLabel
+            // 
+            this.ToDateLabel.AutoSize = true;
+            this.ToDateLabel.BackColor = System.Drawing.Color.White;
+            this.ToDateLabel.Location = new System.Drawing.Point(690, 146);
+            this.ToDateLabel.Name = "ToDateLabel";
+            this.ToDateLabel.Size = new System.Drawing.Size(27, 20);
+            this.ToDateLabel.TabIndex = 5;
+            this.ToDateLabel.Text = "To";
+            // 
+            // FromDateLabel
+            // 
+            this.FromDateLabel.AutoSize = true;
+            this.FromDateLabel.BackColor = System.Drawing.Color.White;
+            this.FromDateLabel.Location = new System.Drawing.Point(690, 49);
+            this.FromDateLabel.Name = "FromDateLabel";
+            this.FromDateLabel.Size = new System.Drawing.Size(46, 20);
+            this.FromDateLabel.TabIndex = 4;
+            this.FromDateLabel.Text = "From";
+            // 
+            // StockListView
+            // 
+            this.StockListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader18,
+            this.columnHeader16});
+            this.StockListView.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.StockListView.FullRowSelect = true;
+            this.StockListView.Location = new System.Drawing.Point(28, 5);
+            this.StockListView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.StockListView.Name = "StockListView";
+            this.StockListView.OwnerDraw = true;
+            this.StockListView.Size = new System.Drawing.Size(627, 315);
+            this.StockListView.TabIndex = 3;
+            this.StockListView.UseCompatibleStateImageBehavior = false;
+            this.StockListView.UseSelectable = true;
+            this.StockListView.View = System.Windows.Forms.View.Details;
+            // 
             // CompanySearchBox
             // 
             // 
@@ -583,193 +771,15 @@
             this.InputTaskTab.VerticalScrollbarHighlightOnWheel = false;
             this.InputTaskTab.VerticalScrollbarSize = 15;
             // 
-            // FINCTab
+            // columnHeader18
             // 
-            this.FINCTab.Controls.Add(this.FINCSListView);
-            this.FINCTab.HorizontalScrollbarBarColor = true;
-            this.FINCTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.FINCTab.HorizontalScrollbarSize = 10;
-            this.FINCTab.Location = new System.Drawing.Point(4, 38);
-            this.FINCTab.Name = "FINCTab";
-            this.FINCTab.Size = new System.Drawing.Size(1080, 349);
-            this.FINCTab.TabIndex = 1;
-            this.FINCTab.Text = "Financial Income Statement";
-            this.FINCTab.VerticalScrollbarBarColor = true;
-            this.FINCTab.VerticalScrollbarHighlightOnWheel = false;
-            this.FINCTab.VerticalScrollbarSize = 10;
-            // 
-            // CFSTab
-            // 
-            this.CFSTab.Controls.Add(this.CFSListView);
-            this.CFSTab.HorizontalScrollbarBarColor = true;
-            this.CFSTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.CFSTab.HorizontalScrollbarSize = 10;
-            this.CFSTab.Location = new System.Drawing.Point(4, 38);
-            this.CFSTab.Name = "CFSTab";
-            this.CFSTab.Size = new System.Drawing.Size(1080, 349);
-            this.CFSTab.TabIndex = 2;
-            this.CFSTab.Text = "Cash Flow Statement";
-            this.CFSTab.VerticalScrollbarBarColor = true;
-            this.CFSTab.VerticalScrollbarHighlightOnWheel = false;
-            this.CFSTab.VerticalScrollbarSize = 10;
-            // 
-            // StockTab
-            // 
-            this.StockTab.Controls.Add(this.ToDateTextBox);
-            this.StockTab.Controls.Add(this.FromDateTextBox);
-            this.StockTab.Controls.Add(this.ToDateLabel);
-            this.StockTab.Controls.Add(this.FromDateLabel);
-            this.StockTab.Controls.Add(this.StockListView);
-            this.StockTab.HorizontalScrollbarBarColor = true;
-            this.StockTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.StockTab.HorizontalScrollbarSize = 10;
-            this.StockTab.Location = new System.Drawing.Point(4, 38);
-            this.StockTab.Name = "StockTab";
-            this.StockTab.Size = new System.Drawing.Size(1080, 349);
-            this.StockTab.TabIndex = 3;
-            this.StockTab.Text = "Stock";
-            this.StockTab.VerticalScrollbarBarColor = true;
-            this.StockTab.VerticalScrollbarHighlightOnWheel = false;
-            this.StockTab.VerticalScrollbarSize = 10;
-            // 
-            // FINCSListView
-            // 
-            this.FINCSListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11});
-            this.FINCSListView.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.FINCSListView.FullRowSelect = true;
-            this.FINCSListView.Location = new System.Drawing.Point(39, 17);
-            this.FINCSListView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.FINCSListView.Name = "FINCSListView";
-            this.FINCSListView.OwnerDraw = true;
-            this.FINCSListView.Size = new System.Drawing.Size(1003, 315);
-            this.FINCSListView.TabIndex = 3;
-            this.FINCSListView.UseCompatibleStateImageBehavior = false;
-            this.FINCSListView.UseSelectable = true;
-            this.FINCSListView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Item ID";
-            this.columnHeader8.Width = 100;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Title";
-            this.columnHeader9.Width = 200;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Year";
-            this.columnHeader10.Width = 75;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Value";
-            this.columnHeader11.Width = 250;
-            // 
-            // CFSListView
-            // 
-            this.CFSListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader12,
-            this.columnHeader13,
-            this.columnHeader14,
-            this.columnHeader15});
-            this.CFSListView.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CFSListView.FullRowSelect = true;
-            this.CFSListView.Location = new System.Drawing.Point(39, 17);
-            this.CFSListView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CFSListView.Name = "CFSListView";
-            this.CFSListView.OwnerDraw = true;
-            this.CFSListView.Size = new System.Drawing.Size(1003, 315);
-            this.CFSListView.TabIndex = 3;
-            this.CFSListView.UseCompatibleStateImageBehavior = false;
-            this.CFSListView.UseSelectable = true;
-            this.CFSListView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Item ID";
-            this.columnHeader12.Width = 100;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Title";
-            this.columnHeader13.Width = 200;
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "Year";
-            this.columnHeader14.Width = 75;
-            // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "Value";
-            this.columnHeader15.Width = 250;
-            // 
-            // StockListView
-            // 
-            this.StockListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader16,
-            this.columnHeader17});
-            this.StockListView.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.StockListView.FullRowSelect = true;
-            this.StockListView.Location = new System.Drawing.Point(22, 14);
-            this.StockListView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.StockListView.Name = "StockListView";
-            this.StockListView.OwnerDraw = true;
-            this.StockListView.Size = new System.Drawing.Size(541, 315);
-            this.StockListView.TabIndex = 3;
-            this.StockListView.UseCompatibleStateImageBehavior = false;
-            this.StockListView.UseSelectable = true;
-            this.StockListView.View = System.Windows.Forms.View.Details;
+            this.columnHeader18.Text = "Day";
+            this.columnHeader18.Width = 100;
             // 
             // columnHeader16
             // 
-            this.columnHeader16.Text = "Day";
-            this.columnHeader16.Width = 100;
-            // 
-            // columnHeader17
-            // 
-            this.columnHeader17.Text = "Closing Price";
-            this.columnHeader17.Width = 200;
-            // 
-            // FromDateLabel
-            // 
-            this.FromDateLabel.AutoSize = true;
-            this.FromDateLabel.BackColor = System.Drawing.Color.White;
-            this.FromDateLabel.Location = new System.Drawing.Point(690, 49);
-            this.FromDateLabel.Name = "FromDateLabel";
-            this.FromDateLabel.Size = new System.Drawing.Size(46, 20);
-            this.FromDateLabel.TabIndex = 4;
-            this.FromDateLabel.Text = "From";
-            // 
-            // ToDateLabel
-            // 
-            this.ToDateLabel.AutoSize = true;
-            this.ToDateLabel.BackColor = System.Drawing.Color.White;
-            this.ToDateLabel.Location = new System.Drawing.Point(690, 146);
-            this.ToDateLabel.Name = "ToDateLabel";
-            this.ToDateLabel.Size = new System.Drawing.Size(27, 20);
-            this.ToDateLabel.TabIndex = 5;
-            this.ToDateLabel.Text = "To";
-            // 
-            // FromDateTextBox
-            // 
-            this.FromDateTextBox.Location = new System.Drawing.Point(753, 49);
-            this.FromDateTextBox.Name = "FromDateTextBox";
-            this.FromDateTextBox.Size = new System.Drawing.Size(100, 26);
-            this.FromDateTextBox.TabIndex = 6;
-            // 
-            // ToDateTextBox
-            // 
-            this.ToDateTextBox.Location = new System.Drawing.Point(753, 146);
-            this.ToDateTextBox.Name = "ToDateTextBox";
-            this.ToDateTextBox.Size = new System.Drawing.Size(100, 26);
-            this.ToDateTextBox.TabIndex = 7;
+            this.columnHeader16.Text = "Closed Adjusted Price";
+            this.columnHeader16.Width = 150;
             // 
             // MainWindow
             // 
@@ -791,12 +801,12 @@
             this.FinancialTab.ResumeLayout(false);
             this.FinancialTabControl.ResumeLayout(false);
             this.BSTab.ResumeLayout(false);
-            this.ICBSearchTab1.ResumeLayout(false);
-            this.ICBSearchTab1.PerformLayout();
             this.FINCTab.ResumeLayout(false);
             this.CFSTab.ResumeLayout(false);
             this.StockTab.ResumeLayout(false);
             this.StockTab.PerformLayout();
+            this.ICBSearchTab1.ResumeLayout(false);
+            this.ICBSearchTab1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -852,12 +862,12 @@
         private System.Windows.Forms.ColumnHeader columnHeader15;
         private MetroFramework.Controls.MetroTabPage StockTab;
         private MetroFramework.Controls.MetroListView StockListView;
-        private System.Windows.Forms.ColumnHeader columnHeader16;
-        private System.Windows.Forms.ColumnHeader columnHeader17;
-        private System.Windows.Forms.TextBox ToDateTextBox;
-        private System.Windows.Forms.TextBox FromDateTextBox;
         private System.Windows.Forms.Label ToDateLabel;
         private System.Windows.Forms.Label FromDateLabel;
+        private System.Windows.Forms.DateTimePicker ToDateTime;
+        private System.Windows.Forms.DateTimePicker FromDateTime;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
     }
 }
 
