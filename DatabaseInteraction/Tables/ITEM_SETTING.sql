@@ -4,7 +4,7 @@
     [Item_Order]       INT           NULL,
     [Item_Description] VARCHAR (MAX) NULL,
     [Item_Properties]  VARCHAR (MAX) NULL,
-    [Item_Tile]        VARCHAR (255) NULL,
+    [Item_Title]        VARCHAR (255) NULL,
     PRIMARY KEY CLUSTERED ([Item_ID] ASC),
     FOREIGN KEY ([ENTRY_ID]) REFERENCES [dbo].[STATEMENT_ENTRIES] ([ENTRY_ID])
 );
